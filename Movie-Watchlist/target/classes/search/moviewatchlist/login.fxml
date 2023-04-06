@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #0D47A1; -fx-background-radius: 0;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="search.moviewatchlist.MainController">
+   <children>
+      <BorderPane fx:id="loginPane" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #0D47A1;">
+         <right>
+            <VBox alignment="CENTER" prefHeight="806.0" prefWidth="679.0" style="-fx-background-color: #0D47A1;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="113.0" prefWidth="500.0" text="JAR MOVIES" textFill="WHITE">
+                     <font>
+                        <Font name="Nonchalance Bold" size="48.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="validationlabel" alignment="CENTER" prefHeight="55.0" prefWidth="696.0" textFill="WHITE">
+                     <font>
+                        <Font name="Telugu Sangam MN" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <VBox prefHeight="339.0" prefWidth="936.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="207.0" text="Username" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Kohinoor Bangla" size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="userid" prefHeight="26.0" prefWidth="271.0" promptText="Enter your username" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="250.0">
+                           <children>
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" text="Password" textFill="WHITE">
+                                 <font>
+                                    <Font name="Kohinoor Bangla" size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="passid" prefHeight="26.0" prefWidth="280.0" promptText="Enter your password" />
+                           </children>
+                        </HBox>
+                        <AnchorPane prefHeight="139.0" prefWidth="769.0" VBox.vgrow="NEVER">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <Button fx:id="signinButton" alignment="CENTER" contentDisplay="CENTER" layoutX="131.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#signIn" prefHeight="38.0" prefWidth="444.0" style="-fx-background-radius: 10;" text="Sign In">
+                                 <font>
+                                    <Font name="Bangla Sangam MN" size="24.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="2.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="19.0" prefWidth="235.0" text="Don't have an account?" textFill="WHITE">
+                           <font>
+                              <Font name="Kohinoor Bangla" size="19.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="loginSignupButton" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showSignUp" prefHeight="36.0" prefWidth="178.0" style="-fx-background-radius: 10px;" text="Sign Up" textAlignment="CENTER">
+                           <font>
+                              <Font name="Bangla Sangam MN" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </right>
+         <left>
+            <ImageView fitHeight="806.0" fitWidth="615.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../images/login-image.jpeg" />
+               </image>
+            </ImageView>
+         </left>
+      </BorderPane>
+      <BorderPane fx:id="signUpPane" layoutX="7.0" layoutY="7.0" prefHeight="809.0" prefWidth="1261.0" style="-fx-border-color: #0D47A1;">
+         <left>
+            <VBox alignment="CENTER" prefHeight="809.0" prefWidth="694.0" spacing="60.0" style="-fx-background-color: #0D47A1;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="81.0" prefWidth="500.0" text="JAR MOVIES" textFill="WHITE" translateY="15.0">
+                     <font>
+                        <Font name="Nonchalance Bold" size="48.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="leftblankerror" alignment="CENTER" prefHeight="69.0" prefWidth="693.0" textFill="WHITE">
+                     <font>
+                        <Font name="Telugu Sangam MN" size="18.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane prefWidth="687.0">
+                     <children>
+                        <GridPane alignment="CENTER" layoutX="60.0" layoutY="-58.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="230.0" prefWidth="579.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="-34.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="327.4871520996094" minWidth="10.0" prefWidth="309.57037353515625" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.42962646484375" minWidth="10.0" prefWidth="356.42962646484375" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="207.0" text="Username" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Kohinoor Bangla" size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="username" prefHeight="26.0" prefWidth="271.0" promptText="Enter your Username" GridPane.columnIndex="1" />
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" text="Password" textFill="WHITE" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Kohinoor Bangla" size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="password" prefHeight="26.0" prefWidth="274.0" promptText="Enter your Password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" text="Confirm Password" textFill="WHITE" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Kohinoor Bangla" size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="confirmpassword" prefHeight="26.0" prefWidth="280.0" promptText="Re-type your Password" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="207.0" text="Email ID" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Kohinoor Bangla" size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="email" layoutX="343.0" layoutY="19.0" prefHeight="26.0" prefWidth="271.0" promptText="Enter your Email ID" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="139.0" prefWidth="694.0">
+                     <children>
+                        <Button fx:id="signUpButton" alignment="CENTER" contentDisplay="CENTER" layoutX="94.0" layoutY="52.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#showSearchResult" prefHeight="38.0" prefWidth="558.0" style="-fx-background-radius: 10;" text="Sign Up">
+                           <font>
+                              <Font name="Bangla Sangam MN" size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </left>
+         <right>
+            <ImageView fitHeight="809.0" fitWidth="717.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../images/signup-image.jpeg" />
+               </image>
+            </ImageView>
+         </right>
+      </BorderPane>
+      <GridPane fx:id="searchResultPane">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+          <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="552.0" style="-fx-background-color: #0D47A1;">
+               <children>
+                  <VBox layoutY="-1.0" prefHeight="801.0" prefWidth="870.0" style="-fx-background-color: #0D47A1;">
+                     <children>
+                        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="127.0" prefWidth="870.0">
+                           <children>
+                              <Button fx:id="resultsSearchButton" alignment="CENTER" contentDisplay="CENTER" layoutX="601.0" mnemonicParsing="false" onAction="#testing" prefHeight="39.0" prefWidth="144.0" style="-fx-background-radius: 5;" text="SEARCH" AnchorPane.leftAnchor="601.0" AnchorPane.topAnchor="30.0">
+                                 <font>
+                                    <Font name="Apple SD Gothic Neo Regular" size="18.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="resultsSearch" alignment="CENTER" layoutX="54.0" onAction="#testing" prefHeight="39.0" prefWidth="532.0" promptText="Enter a Movie or Television Show" style="-fx-background-radius: 5;" AnchorPane.leftAnchor="54.0" AnchorPane.topAnchor="30.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </AnchorPane>
+                        <ScrollPane fitToWidth="true" prefHeight="737.0" prefWidth="870.0" style="-fx-background-color: #0D47A1;" VBox.vgrow="ALWAYS">
+                           <content>
+                              <VBox fx:id="movieList" alignment="TOP_CENTER" maxHeight="775.0" maxWidth="1.7976931348623157E308" prefHeight="703.0" prefWidth="823.0" style="-fx-background-color: #448AFF; -fx-border-color: #0D47A1;" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="327.0" style="-fx-background-color: #1A237E;" GridPane.columnIndex="1">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-5.0" prefHeight="101.0" prefWidth="380.0" text="YOUR WATCHLIST" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="699.0" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="39.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Rockwell" size="24.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane fitToWidth="true" layoutX="44.0" layoutY="98.0" prefHeight="655.0" prefWidth="340.0" style="-fx-border-color: #1A237E;" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0">
+                     <content>
+                        <VBox fx:id="watchList" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="651.0" prefWidth="342.0" style="-fx-background-color: #1A237E;" />
+                     </content>
+                  </ScrollPane>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="319.0" layoutY="28.0" onMousePressed="#WatchlistData" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/refresh-icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</StackPane>

@@ -1,0 +1,27 @@
+.scroll-pane {
+    -fx-background: null;
+    -fx-border-style: none;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: #FFFFFF;
+}
+
+.scroll-pane > .content {
+    -fx-background-color: #FFFFFF;
+    -fx-alignment: center;
+    -fx-padding: 5px;
+}
+
+
+/* Hide vertical scrollbar */
+.scroll-pane .scroll-bar:vertical {
+    -fx-opacity: 0;
+    -fx-pref-width: 0;
+}
+
+/* Hide horizontal scrollbar */
+.scroll-pane .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-pref-height: 0;
+}
